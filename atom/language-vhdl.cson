@@ -56,10 +56,10 @@
   'others':
     'prefix': 'oth'
     'body': '(others => \'${0:0}\');'
-  'oupput std_logic':
+  'output std_logic':
     'prefix': 'osl'
     'body': '$1 : out std_logic;$0'
-  'oupput std_logic_vector downto':
+  'output std_logic_vector downto':
     'prefix': 'oslv'
     'body': '$1 : out std_logic_vector(${2:x} downto ${3:0});$0'
   'package':
