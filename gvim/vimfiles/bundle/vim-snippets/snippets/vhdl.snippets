@@ -1,0 +1,209 @@
+#
+## Libraries
+########################################################
+snippet lib
+	library ${1}
+	use ${1}.${2}
+
+# Standard Libraries
+snippet libs
+	library ieee;
+	use ieee.std_logic_1164.all;
+	use ieee.numeric_std.all;
+	use work.all;
+
+# Xilinx Library
+snippet libx
+	library unisim;
+	use unisim.vcomponents.all;
+##########################################################
+## Entity Declaration
+snippet ent
+	entity ${1:`vim_snippets#Filename()`} is
+		port (
+			${2}
+		);
+	end entity; -- $1
+
+snippet gent
+	entity ${1:`vim_snippets#Filename()`} is
+		generic (
+			${2}
+		);
+		port (
+			${3}
+		);
+	end entity; -- $1
+
+## Architecture
+snippet arc
+	architecture ${1:behav} of ${2:`vim_snippets#Filename()`} is
+
+		${3}
+
+	begin
+
+
+	end architecture; -- $1
+
+## Entity-Architecture declaration
+snippet entarc
+	entity ${1:`vim_snippets#Filename()`} is
+		port (
+			${2}
+		);
+	end entity; -- $1
+
+
+	architecture ${3:behav} of $1 is
+
+		${4}
+
+	begin
+
+
+	end architecture; -- $3
+
+snippet gentarc
+	entity ${1:`vim_snippets#Filename()`} is
+		generic (
+			${2}
+		);
+		port (
+			${3}
+		);
+	end entity; -- $1
+
+
+	architecture ${4:behav} of $1 is
+
+		${5}
+
+	begin
+
+
+	end architecture; -- $4
+
+snippet pm
+	port map (${1});
+
+snippet gm
+	generic map (${1})
+	port map (
+		${2}
+	);
+
+##################### Declarations ################################
+# std_logic
+snippet sl
+	std_logic
+# std_logic_vector
+snippet slv
+	std_logic_vector (${1} downto 0)
+# std_logic in
+snippet isl
+	${1} : in  std_logic;
+# std_logic_vector in
+snippet islv
+	${1} : in  std_logic_vector (${2} downto 0);
+# std_logic out
+snippet osl
+	${1} : out std_logic;
+# std_logic_vector out
+snippet oslv
+	${1} : out std_logic_vector (${2} downto 0);
+# unsigned
+snippet un
+	signal ${1} : unsigned (${2} downto 0);
+snippet sig
+	signal ${1} :
+# integer
+snippet int
+	integer := ${1:2}
+#################### Process Statements ###########################################
+# process
+snippet pr
+	process (${1})
+	begin
+		${2}
+	end process; -- end process $1
+# process with clock
+snippet prc
+	process (${1:clk})
+	begin
+		if rising_edge ($1) then
+			${2}
+		end if; -- end if $1
+	end process;
+# process all
+snippet pra
+	process (${1:all})
+	begin
+		${2}
+	end process;
+
+################## Control Statements ###################################
+# if
+snippet if
+	if ${1} then
+		${2}
+	end if; -- end if $1
+# if
+snippet ifel
+	if ${1} then
+		${2}
+	else
+		${3}
+	end if; -- end if $1
+# else
+snippet el
+	else
+		${1}
+# if
+snippet elif
+	elsif ${1} then
+		${2}
+# case
+snippet case
+	case ${1} is
+		${2}
+	end case; -- end case $1
+# when
+snippet when
+	when ${1} =>
+		${2}
+# for
+snippet for
+	for ${1:i} in ${2} ${3:to} ${4} loop
+		${5}
+	end loop; -- end for $1
+# while
+snippet whil
+	while ${1} loop
+		${2}
+	end loop; -- end while $1
+############### Misc #################à
+# others
+snippet oth
+	(others => '${1:0}');
+########### Testbench ######################
+
+snippet tb
+	library ieee;
+	use ieee.std_logic_1164.all;
+	use ieee.numeric_std.all;
+	use work.all
+
+	entity ${1:tb_entity_name} is
+	end entity; -- $1
+
+
+	architecture ${2:test_entity_name} of $1 is
+
+		${3}
+
+	begin
+
+		${4}
+
+	end architecture; -- $2
