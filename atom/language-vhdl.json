@@ -73,8 +73,8 @@
     'body': '${1:identifier} : process(${2:sensitivity_list})\nbegin\n\t$0\nend process; -- end $1'
   'signal std_logic':
     'prefix': 'sigsl'
-    'body': 'signal $1 : std_logic;'
-  'signal std_logic':
+    'body': 'signal $1 : std_logic;$0'
+  'signal std_logic_vector':
     'prefix': 'sigslv'
     'body': 'signal $1 : std_logic_vector(${2:x} downto ${3:0});$0'
   'signed downto':
