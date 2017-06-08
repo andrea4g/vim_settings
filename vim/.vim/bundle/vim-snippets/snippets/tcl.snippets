@@ -72,7 +72,7 @@ snippet afin
 	after info ${0:id}
 # Expr
 snippet exp
-	expr {${0:#expression here}}
+	expr [${0:#expression here}]
 # Switch
 snippet sw
 	switch ${1:var} {
@@ -94,3 +94,43 @@ snippet ns
 # Namespace current
 snippet nsc
 	namespace current
+# set
+snippet set
+	set ${1:name} ${0:0}
+# set list
+snippet setl
+	set ${0:list_name} [list]
+# lappend on list
+snippet lapp
+	lappend ${1:list_name} $${0:var}
+# scan
+snippet scan
+	scan ${1:$var} "${2:%*}" ${0:name}
+# open file and close file
+snippet file
+	set ${1:pointer_name} [open "${2:file_path}" ${3:w/r}]
+	
+	${0:script here...}
+
+	close $1
+# addition
+snippet add
+	set ${1:dest} [expr $${2:add} + $${0:add}]
+# subtraction
+snippet sub
+	set ${1:dest} [expr $${2:add} - $${0:add}]
+# multiplication
+snippet mul
+	set ${1:dest} [expr $${2:add} * $${0:add}]
+# division
+snippet div
+	set ${1:dest} [expr $${2:add} / $${0:add}]
+# puts
+snippet put
+	puts "${0:text}"
+# regexp
+snippet rege
+	regexp "${1:text}" $${0:var}
+# return
+snippet ret
+	return $${0:var}
