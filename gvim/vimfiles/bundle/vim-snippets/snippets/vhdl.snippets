@@ -89,9 +89,7 @@ snippet pm
 
 snippet gm
 	generic map (${1})
-	port map (
-		${2}
-	);
+	port map (${2});
 
 ##################### Declarations ################################
 # std_logic
@@ -177,6 +175,11 @@ snippet for
 	for ${1:i} in ${2} ${3:to} ${4} loop
 		${5}
 	end loop; -- end for $1
+# for generate
+snippet forgen
+	${1:label} : for ${2:i} in ${3} ${4:to} ${5} generate
+		${6}
+	end generate; -- end for generate $1
 # while
 snippet whil
 	while ${1} loop
