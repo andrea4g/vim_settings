@@ -13,7 +13,6 @@ alias operating_lab5="cd /mnt/c/Users/andre/Documents/master_degree/polito/2nd\ 
 alias operating_lab6="cd /mnt/c/Users/andre/Documents/master_degree/polito/2nd\ semester/Operating\ systems/Laboratories/lab6"
 alias operating_lab7="cd /mnt/c/Users/andre/Documents/master_degree/polito/2nd\ semester/Operating\ systems/Laboratories/lab7"
 alias microelectronics="ssh ms17.20@led-x3850-2.polito.it -p 10018"
-alias microelectronics="ssh ms17.20@led-x3850-2.polito.it -p 10018"
 alias lsa="ls -a"
 alias ..="cd .."
 alias mypython="cd /mnt/c/Workspace/Python"
