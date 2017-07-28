@@ -20,42 +20,19 @@ set softtabstop=2    " Sets the number of columns for a TAB
 
 set expandtab      	 " Expand TABs to spaces
 
-retab
-
 set number		       " Set line number
-
 set smartindent
-
 set autoindent
-
 set visualbell
-
 set backspace=indent,eol,start
+set colorcolumn=80
+
+" f5 to toggle solarized
+call togglebg#map("")
 
 if has('win32') || has('win64') "If gVim under Windows"
     let g:UltiSnipsSnippetDirectories=["$HOME/vifiles/UltiSnips"]
 endif
-
-" Full Screen in Windows
-if has("win32") || has("win16")
-  let g:GVimFullScreen = $HOME.'/vimfiles/gvimfullscreen.dll'
-  function ToggleFullScreen()
-    call libcallnr(g:GVimFullScreen, "ToggleFullScreen", 0)
-  endfunction
-  command! ToggleFullScreen call ToggleFullScreen()
-  map <silent> <F11> :ToggleFullScreen<CR>
-endif
-
-" Toggle background using ALT-t
-function ToggleBackground()
-  if &background == "dark"
-    let &background = "light"
-  else
-    let &background = "dark"
-  endif
-endfunction
-command! ToggleBackground call ToggleBackground()
-map <silent> <M-t> :ToggleBackground<CR>
 
 let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
 

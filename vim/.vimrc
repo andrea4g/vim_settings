@@ -12,3 +12,4 @@ set number
 set smartindent
 set autoindent
 set visualbell
+set colorcolumn=80
