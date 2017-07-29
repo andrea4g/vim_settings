@@ -30,6 +30,17 @@ set colorcolumn=80
 " f5 to toggle solarized
 call togglebg#map("")
 
+" put this in your .vimrc or source it from your .vimrc
+function! ToggleRelativeNumber()
+  if &relativenumber
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunction
+map <F4> :call ToggleRelativeNumber() <CR>
+
+
 if has('win32') || has('win64') "If gVim under Windows"
     let g:UltiSnipsSnippetDirectories=["$HOME/vifiles/UltiSnips"]
 endif

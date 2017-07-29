@@ -10,6 +10,16 @@ set shiftwidth=2
 set expandtab
 set number
 set smartindent
+set colorcolumn=80
 set autoindent
 set visualbell
-set colorcolumn=80
+" put this in your .vimrc or source it from your .vimrc
+function! ToggleRelativeNumber()
+  if &relativenumber
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunction
+map <F4> :call ToggleRelativeNumber() <CR>
+

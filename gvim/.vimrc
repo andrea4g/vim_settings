@@ -17,4 +17,14 @@ set colorcolumn=80
 set shell=powershell
 set shellcmdflag=-command
 
+" put this in your .vimrc or source it from your .vimrc
+function! ToggleRelativeNumber()
+  if &relativenumber
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunction
+map <F4> :call ToggleRelativeNumber() <CR>
+
 let g:Tex_CompileRule_pdf='xelatex -interaction=nonstopmode $*'
