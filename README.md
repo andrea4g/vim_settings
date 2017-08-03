@@ -21,16 +21,16 @@ If you want to install the setting:
 ```
 Download the zip file and unzip it
 ```
-then for gvim (windows)
+then for **gvim (windows)**
 ```
 Copy all the content of gvim into $HOME
 ```
-for vim (linux)
+for **vim (linux)**
 ```
 Copy all the content of vim into ~
 ```
-The WindowsPowerShell folder contains setting to have vim, ssh and git in
-WindowsPowerShell
+The WindowsPowerShell folder contains setting to have vim in
+**WindowsPowerShell**
 ```
 Copy the folder WindowsPowerShell vim into $HOME/Documents
 ```
