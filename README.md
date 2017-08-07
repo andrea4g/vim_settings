@@ -36,6 +36,7 @@ If you want to install the setting using _**Bash on Ubuntu on Windows**_ follow 
     ```
     cp -a setting-master/WindowsPowerShell/. ../Documents/.
     ```
+
 If you want to install the setting using _**Windows PowerShell**_ follow these steps:
   1. Download the zip from Github;
   2. Navigate inside the terminal, go into **Download** folder and then enter:
