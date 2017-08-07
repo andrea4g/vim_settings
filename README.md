@@ -20,10 +20,10 @@ Moreover in gvim are also installed:
 If you want to install the setting using _**Bash on Ubuntu on Windows**_ follow these steps:
   1. Download the zip from Github;
   2. Navigate inside the terminal, go into **Download** folder and then enter:
-    ```
+    ````
     cd /mnt/c/Users/<your_username>/Downloads
     unzip settings-master.zip
-    ```
+    ````
   3. Then for use the new setttings in **gvim (windows)** enter:
     ```
     cp -a setting-master/gvim/. ../.
