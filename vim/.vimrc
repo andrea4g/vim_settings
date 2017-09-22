@@ -13,6 +13,12 @@ set smartindent
 set colorcolumn=80
 set autoindent
 set visualbell
+set fileformat=unix
+
+set list listchars=tab:\ \ ,extends:?,precedes:?,trail:~
+set list
+
+
 " put this in your .vimrc or source it from your .vimrc
 function! ToggleRelativeNumber()
   if &relativenumber
